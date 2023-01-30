@@ -8,7 +8,7 @@ const ThemeButton = () => {
 
   return (
     <div className={classes.buttonDiv}>
-      <label htmlFor="themeLabel">
+      <label htmlFor="themeLabel" className={classes[themeCtx.theme]}>
         {themeCtx.theme !== "dark" ? "Dark" : "Light"}
       </label>
       <button onClick={themeCtx.themeSwitcher}>

@@ -9,6 +9,13 @@
   font-size: 13px;
   line-height: 19px;
   letter-spacing: 2.5px;
+}
+
+.buttonDiv .dark {
+  color: #fff;
+}
+
+.buttonDiv .light {
   color: #697c9a;
 }
 

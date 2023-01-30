@@ -3,3 +3,17 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.header h1 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 39px;
+}
+
+.header .dark {
+  color: #fff;
+}
+
+.header .light {
+  color: #222731;
+}

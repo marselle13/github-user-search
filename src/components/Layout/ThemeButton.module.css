@@ -1,0 +1,19 @@
+.buttonDiv {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.buttonDiv label {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: 2.5px;
+  color: #697c9a;
+}
+
+.buttonDiv button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}

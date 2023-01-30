@@ -12,12 +12,3 @@
 * {
   box-sizing: border-box;
 }
-
-html {
-  font-family: "space-mono", monospace;
-  background: #f6f8ff;
-}
-
-body {
-  margin: 0;
-}

@@ -1,0 +1,19 @@
+html {
+  font-family: "space-mono", monospace;
+}
+
+body.light {
+  margin: 0;
+  background: #f6f8ff;
+}
+
+body.dark {
+  margin: 0;
+  background: #141d2f;
+}
+
+.wrapper {
+  max-width: 45rem;
+  width: 90%;
+  margin: auto;
+}

@@ -12,6 +12,14 @@
   width: 100%;
 }
 
+.searchContainer span {
+  white-space: nowrap;
+  width: 22%;
+  font-size: 15px;
+  line-height: 22px;
+  color: #f74646;
+}
+
 form input {
   font-family: "space-mono";
   width: 100%;
@@ -71,5 +79,9 @@ form button:hover {
   }
   .searchContainer form {
     gap: 7px;
+  }
+
+  .searchContainer span {
+    font-size: 9px;
   }
 }

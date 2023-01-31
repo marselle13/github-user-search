@@ -1,5 +1,4 @@
 import classes from "./User.module.css";
-import icon from "../../assets/Bitmap.png";
 import UserGit from "./UserGit";
 import UserSocial from "./UserSocial";
 import { useContext } from "react";
@@ -8,7 +7,7 @@ import APIContext from "../../store/apiContext";
 const User = () => {
   const themeCtx = useContext(APIContext);
   const { userData } = themeCtx;
-  console.log(userData);
+
   const date = new Date(userData.create);
   const year = date.getFullYear();
   const month = date.toLocaleString("en-US", { month: "short" });

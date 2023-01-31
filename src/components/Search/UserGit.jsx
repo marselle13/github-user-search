@@ -5,7 +5,6 @@ import classes from "./UserGit.module.css";
 const UserGit = () => {
   const themeCtx = useContext(APIContext);
   const { userData } = themeCtx;
-  console.log(userData);
 
   return (
     <div className={`${classes.gitContainer} ${classes[themeCtx.theme]}`}>

@@ -13,7 +13,7 @@ function App() {
     <div className={classes.wrapper}>
       <Header />
       <SearchBar />
-      <SearchResult />
+      {"Loading" && <SearchResult />}
     </div>
   );
 }

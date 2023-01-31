@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const APIContext = React.createContext({
+  noUser: false,
   userData: {},
   theme: "dark",
   themeSwitcher: () => {},
@@ -12,7 +13,7 @@ export const APIContextProvider = (props) => {
   const [userData, setUserData] = useState({});
   const [theme, setTheme] = useState("light");
   const [username, setUsername] = useState("octocat");
-
+  const [noUser, setNoUser] = useState(false);
   const themeHandler = () => {
     setTheme((theme) => (theme === "dark" ? "light" : "dark"));
   };
@@ -34,8 +35,13 @@ export const APIContextProvider = (props) => {
   async function getUserData() {
     try {
       const response = await fetch(`https://api.github.com/users/${username}`);
+
       const data = await response.json();
 
+      if (!response.ok) {
+        throw new Error(true);
+      }
+      setNoUser(false);
       setUserData({
         avatar: data.avatar_url,
         name: data.name,
@@ -52,7 +58,7 @@ export const APIContextProvider = (props) => {
         blog: data.blog,
       });
     } catch (err) {
-      console.error(err);
+      setNoUser(true);
     }
   }
 
@@ -64,6 +70,7 @@ export const APIContextProvider = (props) => {
         onChangeUsername: usernameHandler,
         submit: submitHandler,
         userData: userData,
+        noUser: noUser,
       }}
     >
       {props.children}

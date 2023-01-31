@@ -10,7 +10,6 @@ import APIContext from "../../store/apiContext";
 const UserSocial = () => {
   const themeCtx = useContext(APIContext);
   const { userData } = themeCtx;
-  console.log(userData);
 
   return (
     <section className={classes.socialDiv}>

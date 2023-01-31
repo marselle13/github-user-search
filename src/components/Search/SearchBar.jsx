@@ -6,6 +6,7 @@ import APIContext from "../../store/apiContext";
 
 const SearchBar = () => {
   const themeCtx = useContext(APIContext);
+  console.log();
 
   return (
     <Card>
@@ -20,6 +21,8 @@ const SearchBar = () => {
             className={classes[themeCtx.theme]}
             onChange={themeCtx.onChangeUsername}
           />
+          {themeCtx.noUser ? <span>No results</span> : null}
+
           <button>Search</button>
         </form>
       </div>

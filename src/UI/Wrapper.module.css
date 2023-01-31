@@ -4,16 +4,18 @@
 
 .social {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   gap: 1rem;
 }
 
 .light {
+  white-space: nowrap;
   margin: 0;
   color: #4b6a9b;
 }
 
 .dark {
+  white-space: nowrap;
   margin: 0;
   color: #fff;
 }
@@ -25,9 +27,5 @@
 @media (max-width: 580px) {
   .result {
     padding: 3rem 24px;
-  }
-
-  .social {
-    align-items: end;
   }
 }

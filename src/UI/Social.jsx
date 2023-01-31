@@ -6,9 +6,23 @@ const Social = (props) => {
   const themeCtx = useContext(APIContext);
 
   return (
-    <div className={classes.social}>
+    <div
+      className={classes.social}
+      style={{ opacity: props.data || props.link ? "1" : "0.5" }}
+    >
       <img src={props.icon} alt="icon" />
-      {props.children}
+      {props.link ? (
+        <a
+          href={props.link}
+          style={{ color: themeCtx.theme === "light" ? "#697c9a" : "#fff" }}
+        >
+          {props.link || "Not Available"}
+        </a>
+      ) : (
+        <p className={classes[themeCtx.theme]}>
+          {props.data || "Not Available"}
+        </p>
+      )}
     </div>
   );
 };

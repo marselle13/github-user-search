@@ -4,23 +4,23 @@ import classes from "./UserGit.module.css";
 
 const UserGit = () => {
   const themeCtx = useContext(APIContext);
+  const { userData } = themeCtx;
+  console.log(userData);
 
   return (
     <div className={`${classes.gitContainer} ${classes[themeCtx.theme]}`}>
       <ul>
         <li>
           <p>Repos</p>
-          <h3>8</h3>
+          <h3>{userData.repos}</h3>
         </li>
         <li>
-          {" "}
           <p>Followers</p>
-          <h3>3938</h3>
+          <h3>{userData.followers}</h3>
         </li>
         <li>
-          {" "}
           <p>Following</p>
-          <h3>9</h3>
+          <h3>{userData.following}</h3>
         </li>
       </ul>
     </div>

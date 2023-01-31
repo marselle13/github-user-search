@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const APIContext = React.createContext({
   userData: {},
@@ -27,24 +27,33 @@ export const APIContextProvider = (props) => {
     getUserData();
   };
 
-  async function getUserData() {
-    const response = await fetch(`https://api.github.com/users/${username}`);
-    const data = await response.json();
+  useEffect(() => {
+    getUserData();
+  }, []);
 
-    setUserData({
-      avatar: data.avatar_url,
-      name: data.name,
-      login: data.login,
-      bio: data.bio,
-      create: data.created_at,
-      repos: data.public_repos,
-      followers: data.followers,
-      following: data.following,
-      company: data.company,
-      location: data.location,
-      twitter: data.twitter_username,
-      blog: data.blog,
-    });
+  async function getUserData() {
+    try {
+      const response = await fetch(`https://api.github.com/users/${username}`);
+      const data = await response.json();
+
+      setUserData({
+        avatar: data.avatar_url,
+        name: data.name,
+        login: data.login,
+        url: data.html_url,
+        bio: data.bio,
+        create: data.created_at,
+        repos: data.public_repos,
+        followers: data.followers,
+        following: data.following,
+        company: data.company,
+        location: data.location,
+        twitter: data.twitter_username,
+        blog: data.blog,
+      });
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   return (

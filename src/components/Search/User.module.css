@@ -9,6 +9,11 @@
   display: none;
 }
 
+.searchResultContainer .iconDesktop {
+  width: 117px;
+  height: 117px;
+}
+
 .searchResultContainer img {
   border-radius: 50%;
 }
@@ -93,6 +98,11 @@
     position: relative;
     width: 30rem;
     left: -180px;
+  }
+
+  .iconMobile {
+    width: 117px;
+    height: 117px;
   }
 }
 

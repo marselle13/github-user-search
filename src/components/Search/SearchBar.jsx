@@ -1,22 +1,24 @@
-import Card from "../../../UI/Card";
-import search from "../../../assets/icon-search.svg";
+import Card from "../../UI/Card";
+import search from "../../assets/icon-search.svg";
 import classes from "./SearchBar.module.css";
 import { useContext } from "react";
-import APIContext from "../../../store/apiContext";
+import APIContext from "../../store/apiContext";
 
 const SearchBar = () => {
   const themeCtx = useContext(APIContext);
+
   return (
     <Card>
       <div className={classes.searchContainer}>
         <div>
-          <img src={search} alt="search" />
+          <img src={search} alt="search" className={classes.searchIcon} />
         </div>
-        <form>
+        <form onSubmit={themeCtx.submit}>
           <input
             type="text"
             placeholder="Search GitHub username…"
             className={classes[themeCtx.theme]}
+            onChange={themeCtx.onChangeUsername}
           />
           <button>Search</button>
         </form>

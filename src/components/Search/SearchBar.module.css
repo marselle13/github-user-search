@@ -57,7 +57,7 @@ form button:hover {
   background: #60abff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 580px) {
   .searchContainer {
     gap: 8px;
     padding: 1rem 7px 1rem 1rem;

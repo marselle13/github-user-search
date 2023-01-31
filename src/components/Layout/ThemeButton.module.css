@@ -1,26 +1,38 @@
 .buttonDiv {
   display: flex;
   align-items: center;
-  gap: 1rem;
-}
-
-.buttonDiv label {
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 19px;
-  letter-spacing: 2.5px;
-}
-
-.buttonDiv .dark {
-  color: #fff;
-}
-
-.buttonDiv .light {
-  color: #697c9a;
 }
 
 .buttonDiv button {
   background: transparent;
   border: none;
   cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: 2.5px;
+}
+.buttonDiv .buttonItems {
+  display: flex;
+  gap: 1rem;
+}
+
+.buttonDiv .light {
+  color: #697c9a;
+  fill: #697c9a;
+}
+
+.buttonDiv .light:hover {
+  color: #222731;
+  fill: #222731;
+}
+
+.buttonDiv .dark {
+  color: #fff;
+  fill: #fff;
+}
+
+.buttonDiv .dark:hover {
+  color: #90a4d4;
+  fill: #90a4d4;
 }

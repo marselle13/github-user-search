@@ -6,7 +6,7 @@ const APIContext = React.createContext({
 });
 
 export const APIContextProvider = (props) => {
-  const [theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState("light");
 
   const themeHandler = () => {
     setTheme((theme) => (theme === "dark" ? "light" : "dark"));

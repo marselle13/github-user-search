@@ -8,15 +8,14 @@ const ThemeButton = () => {
 
   return (
     <div className={classes.buttonDiv}>
-      <label htmlFor="themeLabel" className={classes[themeCtx.theme]}>
-        {themeCtx.theme !== "dark" ? "Dark" : "Light"}
-      </label>
-      <button onClick={themeCtx.themeSwitcher}>
-        {themeCtx.theme !== "dark" ? (
-          <MoonIcon className={classes.MoonIcon} />
-        ) : (
-          <SunIcon />
-        )}
+      <button
+        onClick={themeCtx.themeSwitcher}
+        className={classes[themeCtx.theme]}
+      >
+        <div className={`${classes.buttonItems} ${classes[themeCtx.theme]}`}>
+          {themeCtx.theme !== "dark" ? "Dark" : "Light"}
+          {themeCtx.theme !== "dark" ? <MoonIcon /> : <SunIcon />}
+        </div>
       </button>
     </div>
   );

@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/github-user-search/static/css/main.73b291e8.css",
+    "main.js": "/github-user-search/static/js/main.b9a0a0b0.js",
+    "static/media/SpaceMono-Regular.ttf": "/github-user-search/static/media/SpaceMono-Regular.8a2aa304d0bd5e41d186.ttf",
+    "static/media/SpaceMono-Bold.ttf": "/github-user-search/static/media/SpaceMono-Bold.056ac3ebe5f65cb5c4ac.ttf",
+    "static/media/icon-website.svg": "/github-user-search/static/media/icon-website.b7923f6c1dae9717c079c60d8a5c82e5.svg",
+    "static/media/icon-company.svg": "/github-user-search/static/media/icon-company.6f78ffb334b191c8ed54d0c2a6f7cc25.svg",
+    "index.html": "/github-user-search/index.html",
+    "static/media/icon-twitter.svg": "/github-user-search/static/media/icon-twitter.f6a2a695fbb260b28a9fd67dd4179ea5.svg",
+    "static/media/icon-search.svg": "/github-user-search/static/media/icon-search.0cc0c98424cc75d5e1dfbb9e3abb6785.svg",
+    "static/media/icon-location.svg": "/github-user-search/static/media/icon-location.f11c5487a9922cbad40a27e8cc1cfaee.svg",
+    "main.73b291e8.css.map": "/github-user-search/static/css/main.73b291e8.css.map",
+    "main.b9a0a0b0.js.map": "/github-user-search/static/js/main.b9a0a0b0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.73b291e8.css",
+    "static/js/main.b9a0a0b0.js"
+  ]
+}

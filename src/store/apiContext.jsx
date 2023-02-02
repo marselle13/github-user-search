@@ -22,17 +22,7 @@ export const APIContextProvider = (props) => {
     setUsername(event.target.value);
   };
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-
-    getUserData();
-  };
-
-  useEffect(() => {
-    getUserData();
-  }, []);
-
-  async function getUserData() {
+  const getUserData = async function () {
     try {
       const response = await fetch(`https://api.github.com/users/${username}`);
 
@@ -60,7 +50,19 @@ export const APIContextProvider = (props) => {
     } catch (err) {
       setNoUser(true);
     }
-  }
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    if (username.length > 0) {
+      getUserData();
+    }
+  };
+
+  useEffect(() => {
+    getUserData();
+  }, []);
 
   return (
     <APIContext.Provider

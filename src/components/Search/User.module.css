@@ -3,6 +3,10 @@
   gap: 37px;
 }
 .searchResultContainer .desktop {
+  background: #4b6a9b;
+  width: 117px;
+  height: 117px;
+  border-radius: 50%;
   display: block;
 }
 .searchResultContainer .mobile {

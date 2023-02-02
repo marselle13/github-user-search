@@ -16,11 +16,7 @@ const User = () => {
   return (
     <section className={classes.searchResultContainer}>
       <div className={classes.desktop}>
-        <img
-          src={userData.avatar}
-          alt="user-icon"
-          className={classes.iconDesktop}
-        />
+        <img src={userData.avatar} className={classes.iconDesktop} alt="" />
       </div>
       <div className={`${classes.data} ${classes[themeCtx.theme]}`}>
         <div className={classes.nameDateDiv}>

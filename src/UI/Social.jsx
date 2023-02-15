@@ -16,7 +16,7 @@ const Social = (props) => {
           href={props.link}
           style={{ color: themeCtx.theme === "light" ? "#697c9a" : "#fff" }}
         >
-          {props.link || "Not Available"}
+          {"Blog" || "Not Available"}
         </a>
       ) : (
         <p className={classes[themeCtx.theme]}>
